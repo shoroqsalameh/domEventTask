@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Country Photo </title>
+   
+</head>
+<body>
+          <select name="country" id="country" onchange="showImage()">
+                <option value="Palestine">Palestine</option>
+                <option value="Jordan">Jordan</option>
+                <option value="Turky">Turky</option>
+                <option value="Norway">Norway</option>
+               
+          </select>
+          <div id="div1">
+          <img src="palestine.png" alt="palestine" width="300px" height="300px" id="image">
+          </div>
+          <script> 
+                        function showImage(){
+                          let countryName=document.getElementById("country").value;
+                          let countryphoto=document.getElementById("image");
+                          let element=document.getElementById("div1");
+                         
+                          if(countryName=="Palestine")
+                          {
+                             countryphoto.src="palestine.png";
+                             countryphoto.alt="palestine";
+                             element.displa="block";
+
+                          }
+                          else if(countryName=="Jordan")
+                          {
+                               countryphoto.src="jordan.png";
+                               countryphoto.alt="jordan";
+                               element.displa="block";
+                          }
+                          else if(countryName=="Turky"){
+                                   countryphoto.src="turky.png";
+                                   countryphoto.alt="turky";
+                                   element.displa="block";
+                          }
+                          else if(countryName=="Norway")
+                          {
+                                 countryphoto.src="norway.png";
+                                 countryphoto.alt="norway";
+                                 element.displa="block";
+                          }
+                          else 
+                          {
+                            element.displa="non";
+                          }
+
+                     }
+          </script>
+</body>
+</html>

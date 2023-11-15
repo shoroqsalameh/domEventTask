@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Style change</title>
+    <style>
+              p{
+                 border: 2px solid black;
+                 width: 200px;
+                 height: 40px;
+                 text-align: center;
+                 cursor: pointer;
+
+                 
+                
+              }
+    </style>
+</head>
+<body>
+       
+             <p onclick="styleChange()" id="border">Hello World!</p>
+             
+
+      
+       <script>
+               function styleChange(){
+                       let element=document.querySelector('#border');
+                       element.style.backgroundColor="yellow";
+                       element.style.fontWeight="900";
+                       element.style.fontSize="30px";
+                     
+               }
+       </script>
+</body>
+</html>

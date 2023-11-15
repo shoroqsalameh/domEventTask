@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>password </title>
+    <style>
+                form input{
+                         width: 200px;
+                         margin: 30px;
+                         height: 30px;
+                         display: block;
+                         
+
+                }
+                form button{
+                       background-color: blue;
+                       color: white;
+                       font-weight: 800;
+                       border-color: white;
+                       width: 200px;
+                       height: 50px;
+                       margin: 30px;
+
+                }
+                span{
+                    display: inline;
+                }
+                
+    </style>
+</head>
+<body>
+           <form action="#" method="post">
+                  <span>
+
+                 
+                  <input type="password" name="password" id="password" placeholder="Password" required>
+                  <p id="lenMess"></p>
+                  </span>
+                  <span>
+                  <input type="password" name="confirmPassword" id="confirmPassword" placeholder="Confirm Password" required>
+                  <p id="simMess"></p>
+                  </span>
+                  <button id="submitBtn" onclick="passwordValidition()">Submit</button>
+           </form>
+           
+           <script>
+                     function passwordValidition(){
+                          let passValue=document.getElementById("password").value.toString();;
+                    
+                          let conPass=document.getElementById("confirmPassword").value.toString();;
+                          let submitBtn=document.getElementById("submitBtn");
+                          if(passValue.length<6)
+                          {
+                             document.getElementById("lenMess").innerText=`Too short`;
+                             document.getElementById("lenMess").style.color="red";
+                          }
+
+                        if(passValue!==conPass)
+                        {
+                            document.getElementById("simMess").innerText=`the two passwords dont match`;
+                            document.getElementById("simMess").style.color="red";
+                        }
+                        
+                     }
+           </script>
+</body>
+</html>
